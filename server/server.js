@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const reservationRoutes = require('./routes/reservationRoutes');
+const reservationRoutes = require('./routes/reservations');
 const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const { MongoClient, ServerApiVersion } = require('mongodb');
