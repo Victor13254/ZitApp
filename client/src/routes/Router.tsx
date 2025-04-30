@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from '../views/main/MainPage';
-import AdminLogin from '../views/AdminLogin';
-import AdminRegister from '../views/AdminRegister';
-import ClientLogin from '../views/ClientLogin';
-import ClientRegister from '../views/ClientRegister';
+import AdminLogin from "../views/auth/AdminLogin";
+import AdminRegister from "../views/auth/AdminRegister";
+import ClientLogin from "../views/auth/ClientLogin";
+import ClientRegister from "../views/auth/ClientRegister";
 import Reservations from '../views/Reservations';
 import ProtectedRoute from './ProtectedRoute';
 
