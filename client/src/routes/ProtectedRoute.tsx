@@ -10,15 +10,18 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ element, requiredRole }) => {
   const { user } = useAuth();
-  const [isRedirecting, setIsRedirecting] = useState(true);
 
-  useEffect(() => {
-    if (user) {
-      setIsRedirecting(false);
-    } else {
-      setIsRedirecting(true);
-    }
-  }, [user]);
+  if (!user) {
+    return <Navigate to="/" />; // redirige al login si no está autenticado
+  }
+
+  if (requiredRole !== 'any' && user.role !== requiredRole) {
+    // redirige al dashboard correcto si intenta acceder a algo que no le corresponde
+    return <Navigate to={`/${user.role}/dashboard`} />;
+  }
+
+  return element;
+};
 
   const redirectTo = () => {
     if (!user) {
