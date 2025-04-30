@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function MainPage() {
     return (
         <div style={{ padding: '2rem' }}>
-          <h1>-</h1>
+          <h1>App reservas restaurante</h1>
           <ul style={{ listStyle: 'none', lineHeight: '2rem' }}>
             <li><Link to="/login">Login Cliente</Link></li>
             <li><Link to="/register">Registro Cliente</Link></li>
