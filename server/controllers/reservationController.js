@@ -1,7 +1,7 @@
 const Reservation = require('../models/Reservation');
 
 // Obtener todas las reservas
-exports.getAllReservations = async (req, res) => {
+exports.getReservations = async (req, res) => {
   try {
     const reservations = await Reservation.find();
     res.json(reservations);
