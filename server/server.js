@@ -1,13 +1,17 @@
 const express = require('express');
 const cors = require('cors');
+const reservationRoutes = require('./routes/reservationRoutes');
+const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
+dotenv.config();
 const app = express();
 const port = 5000; 
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/reservations', reservationRoutes);
 
 const uri = "mongodb+srv://victorcespedes0710:bbEDVgV4CDqvncHL@cluster0.toxvfcr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
