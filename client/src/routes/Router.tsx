@@ -20,10 +20,10 @@ export default function Router() {
       <Route path="/clientlogin" element={<ClientLogin />} />
       <Route path="/clientregister" element={<ClientRegister />} />
       <Route path="/reservations" element={
-        <ProtectedRoute role="admin">
-          <Reservations />
-        </ProtectedRoute>
-      } />
+      <ProtectedRoute role="admin">
+        <Reservations />
+      </ProtectedRoute>
+    } />
     </Routes>
   );
 }
