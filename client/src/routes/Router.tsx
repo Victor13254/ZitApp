@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../views/main/MainPage';
+import MainPage from '../views/main/MainPage';
 import AdminLogin from "../views/auth/AdminLogin";
 import AdminRegister from "../views/auth/AdminRegister";
 import ClientLogin from "../views/auth/ClientLogin";
