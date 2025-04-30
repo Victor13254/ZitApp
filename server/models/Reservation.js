@@ -1,11 +1,14 @@
-const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const {
+  createReservation,
+  getReservations,
+  deleteReservation // Asegúrate de que este nombre coincide con el del controller
+} = require('../controllers/reservationController');
 
-const reservationSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  date: String,
-  time: String,
-  people: Number,
-});
+router.post('/', createReservation);
+router.get('/', getReservations);
+router.delete('/:id', deleteReservation);
 
-module.exports = mongoose.model('Reservation', reservationSchema);
+module.exports = router;
+
