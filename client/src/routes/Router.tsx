@@ -10,7 +10,7 @@ import ProtectedRoute from './ProtectedRoute';
 export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<MainPage />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/adminregister" element={
         <ProtectedRoute role="admin">
