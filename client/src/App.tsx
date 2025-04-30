@@ -4,11 +4,9 @@ import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Router />
-      </AuthProvider>
-    </BrowserRouter>
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   );
 }
 
